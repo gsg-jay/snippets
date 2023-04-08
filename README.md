@@ -1,5 +1,5 @@
-# snippets
-Snippets
+# Snippets
+Event system + State manager = ❤️
 
 ## Platforming
 ```cs
