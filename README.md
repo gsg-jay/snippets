@@ -1,6 +1,9 @@
 # Snippets
 Event system + State manager = ❤️
 
+## Event System
+For implementation see [Dragon Trigger repo](https://github.com/gsg-jay/dragontrigger/tree/main/Assets/Scripts/_DTPrelude)
+
 ## Platforming
 ```cs
 using UnityEngine;
