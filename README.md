@@ -4,7 +4,7 @@ https://www.spriters-resource.com
 
 # Mechanics
 BossAI.cs
-Tutorial = https://www.youtube.com/watch?v=X7VwAGvAOIw
++ [Tutorial](https://www.youtube.com/watch?v=X7VwAGvAOIw)
 ```cs
 
 ```
