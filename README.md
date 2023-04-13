@@ -4,7 +4,7 @@
 + https://www.spriters-resource.com
 
 ## Folder structure
-![img]("./Screenshot 2023-04-13 at 18.49.01.png")
+![img](dir.png")
 
 ## Toolchain
 
