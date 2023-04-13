@@ -1,8 +1,15 @@
-# Placeholder Art 
+# Quickstart
 
-https://www.spriters-resource.com
+## WIP Assets
++ https://www.spriters-resource.com
 
-# Mechanics
+## Folder structure
+![](Screenshot 2023-04-13 at 18.49.01.png)
+
+## Toolchain
+
+
+## Mechanics
 BossAI.cs
 + [Tutorial](https://www.youtube.com/watch?v=X7VwAGvAOIw)
 ```cs
