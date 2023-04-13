@@ -1,10 +1,13 @@
 # Quickstart
 
+## General tips
+<img src="dir.png" width="440" />
+<img src="01.png" width="440" />
+<img src="02.png" width="440" />
+<img src="03.png" width="440" />
+
 ## WIP Assets
 + https://www.spriters-resource.com
-
-## Folder structure
-<img src="dir.png" width="400" />
 
 ## Toolchain
 
