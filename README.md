@@ -4,7 +4,7 @@
 + https://www.spriters-resource.com
 
 ## Folder structure
-<img src="dir.png" width="240" />
+<img src="dir.png" width="400" />
 
 ## Toolchain
 
