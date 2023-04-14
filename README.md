@@ -14,8 +14,8 @@ This is used for handling the <u>implementation</u> of the logic and communicati
 // Getters are used to access the variables from a PlayMaker FSM
 // Getters are written on one line
 public float GetSpeed(){ return speed; } // Gets speed
-public float GetSpeed(){ return speed; } // Gets health
-public float GetSpeed(){ return speed; } // Gets damage
+public float GetHealth(){ return speed; } // Gets health
+public float GetDamage(){ return speed; } // Gets damage
 // ...
 ```
 
