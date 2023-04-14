@@ -59,9 +59,9 @@ public class Controller : MonoBehaviour {
 ### 2. FSMs (PlayMaker = "The When")
 ```cs
 // PlayMaker variables are local variables used as duplicates of the variables in the Controller
-var FSM_PLAYER_SPEED // Value is stored in this variable when Player.GetSpeed() is Invoked
-var FSM_PLAYER_DAMAGE // Value is stored in this variable when Player.GetDamage() is Invoked
-var FSM_PLAYER_HEALTH // Value is stored in this variable when Player.GetHealth() is Invoked
+var FSM_PLAYER_SPEED; // Value is stored in this variable when Player.GetSpeed() is Invoked
+var FSM_PLAYER_DAMAGE; // Value is stored in this variable when Player.GetDamage() is Invoked
+var FSM_PLAYER_HEALTH; // Value is stored in this variable when Player.GetHealth() is Invoked
 ```
 
 
