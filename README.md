@@ -11,49 +11,49 @@ f("FSM")--->|Invoke|c("Controller?.Method()")
 ### 1. Controllers (C# = "The What + How")
 Manages <u style="color: magenta;">implementation detail</u> of the logic and communicating with other GameObjects.
 ```cs
-// Reference to GameManager
-private GameManager _gameManager = GameManager.Instance;
+public class Controller : MonoBehaviour {
+  // Reference to GameManager
+  private GameManager _gameManager = GameManager.Instance;
 
-// Controller variables are always private
-[SerializeField] private float _speed;
-[SerializeField] private float _health;
-[SerializeField] private float _damage;
+  // Controller variables are always private
+  [SerializeField] private float _speed;
+  [SerializeField] private float _health;
+  [SerializeField] private float _damage;
 
-// Getters are used to access the variables from a PlayMaker FSM
-// Getters are written on one line
-public float GetSpeed(){ return _speed; } // Gets speed
-public float GetHealth(){ return _health; } // Gets health
-public float GetDamage(){ return _damage; } // Gets damage
-// ...
+  // Getters are used to access the variables from a PlayMaker FSM
+  // Getters are written on one line
+  public float GetSpeed(){ return _speed; } // Gets speed
+  public float GetHealth(){ return _health; } // Gets health
+  public float GetDamage(){ return _damage; } // Gets damage
+  // ...
 
-// --------------------------
-// LIFECYCLE
-// --------------------------
-private void Start() {
- // ...
-}
-private void FixedUpdate() {
- // ...
-}
-private void Update() {
- // ...
-}
-private void OnTriggerEnter(Collider other) {
-   if (other.gameObject.CompareTag("enemy")) {
-       other.getComponent<EnemyController>().GetPower();
-       TakeDamage()
-   }
-}
+  // --------------------------
+  // LIFECYCLE
+  // --------------------------
+  private void Start() {
+   // ...
+  }
+  private void FixedUpdate() {
+   // ...
+  }
+  private void Update() {
+   // ...
+  }
+  private void OnTriggerEnter(Collider other) {
+     if (other.gameObject.CompareTag("enemy")) {
+         other.getComponent<EnemyController>().GetPower();
+         TakeDamage()
+     }
+  }
 
-// --------------------------
-// METHODS (Event Callbacks)
-// --------------------------
-public void TakeDamage() {
-  _gameManager.OnPlayerTakeDamage?.Invoke();
-  // Do stuff...
-  On
+  // --------------------------
+  // METHODS (Event Callbacks)
+  // --------------------------
+  public void TakeDamage() {
+    // Do stuff...
+    _gameManager.OnPlayerTakeDamage?.Invoke();
+  }
 }
-
 ```
 
 ### 2. FSMs (PlayMaker = "The When")
