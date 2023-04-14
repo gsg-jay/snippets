@@ -4,8 +4,12 @@
 
 ## Architecture
 ```mermaid
-graph TD;
-f("FSM")--->|Invoke|c("Controller?.Method()")
+graph LR;
+g[Game]
+g--->|FSM|ai(AI)
+g--->c|C# Script|(Controllers)
+c--->e|Unity Event|
+e-->g
 ```
 
 ### 1. Controllers (C# = "The What + How")
