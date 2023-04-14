@@ -2,10 +2,13 @@
 
 :warning: No process is perfect.
 
-## State Management 
-### 1. Controllers (C#)
-This is used for handling the <u>implementation</u> of the logic and communicating with other objects in the game.
+## Architecture
+### 1. Controllers (C# = "The What")
+Manages <u style="color: magenta;">implementation detail</u> of the logic and communicating with other GameObjects.
 ```cs
+// Reference to GameManager
+private GameManager _gameManager = GameManager.Instance;
+
 // Controller variables are always private
 [SerializeField] private float _speed;
 [SerializeField] private float _health;
@@ -13,16 +16,47 @@ This is used for handling the <u>implementation</u> of the logic and communicati
 
 // Getters are used to access the variables from a PlayMaker FSM
 // Getters are written on one line
-public float GetSpeed(){ return speed; } // Gets speed
-public float GetHealth(){ return speed; } // Gets health
-public float GetDamage(){ return speed; } // Gets damage
+public float GetSpeed(){ return _speed; } // Gets speed
+public float GetHealth(){ return _health; } // Gets health
+public float GetDamage(){ return _damage; } // Gets damage
 // ...
+
+// --------------------------
+// LIFECYCLE
+// --------------------------
+private void Start() {
+ // ...
+}
+private void FixedUpdate() {
+ // ...
+}
+private void Update() {
+ // ...
+}
+private void OnTriggerEnter(Collider other) {
+   if (other.gameObject.CompareTag("enemy")) {
+       other.getComponent<EnemyController>().GetPower();
+       TakeDamage()
+   }
+}
+
+// --------------------------
+// METHODS (Event Callbacks)
+// --------------------------
+public void TakeDamage() {
+  _gameManager.OnPlayerTakeDamage?.Invoke();
+  // Do stuff...
+  On
+}
+
 ```
 
-### 2. FSMs (PlayMaker)
-```
+### 2. FSMs (PlayMaker = "The When")
+```cs
 // PlayMaker variables are local variables used as duplicates of the variables in the Controller
-FSM_PLAYER_SPEED = /* Reads from Player.GetSpeed() */
+var FSM_PLAYER_SPEED // Value is stored in this variable when Player.GetSpeed() is Invoked
+var FSM_PLAYER_DAMAGE // Value is stored in this variable when Player.GetDamage() is Invoked
+var FSM_PLAYER_HEALTH // Value is stored in this variable when Player.GetHealth() is Invoked
 ```
 
 
