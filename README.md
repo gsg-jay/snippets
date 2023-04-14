@@ -5,7 +5,7 @@
 ## Architecture
 ```mermaid
 graph TD;
-f("FSM")--->|when true|i(Invoke Method)-->|Invoke|c("Contoller.Method.Ivn()")--->|Do this|gm("GameManager.Instance.OnFoo?.Invoke()")
+f("FSM")--->|Invoke|c("Controller?.Method()")
 ```
 
 ### 1. Controllers (C# = "The What + How")
