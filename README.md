@@ -3,6 +3,11 @@
 :warning: No process is perfect.
 
 ## Architecture
+```mermaid
+graph TD;
+f("FSM (when)")--->||c("Contoller.Method()")--->gm("GameManager.Instance.OnFoo?.Invoke()")
+```
+
 ### 1. Controllers (C# = "The What + How")
 Manages <u style="color: magenta;">implementation detail</u> of the logic and communicating with other GameObjects.
 ```cs
