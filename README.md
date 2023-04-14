@@ -3,7 +3,7 @@
 :warning: No process is perfect.
 
 ## Architecture
-### 1. Controllers (C# = "The What")
+### 1. Controllers (C# = "The What + How")
 Manages <u style="color: magenta;">implementation detail</u> of the logic and communicating with other GameObjects.
 ```cs
 // Reference to GameManager
